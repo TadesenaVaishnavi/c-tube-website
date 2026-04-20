@@ -1,0 +1,92 @@
+/* Scope everything inside profilePage */
+.profilePage {
+    background: #0f0f0f;
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  /* Center container */
+  .profilePage .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+  
+  /* Card */
+  .profilePage .card {
+    background: #181818;
+    padding: 40px;
+    border-radius: 20px;
+    width: 420px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+    transition: 0.3s;
+  }
+  
+  .profilePage .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Profile pic */
+  .profilePage .profile-pic {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #aaa, #ddd);
+    border-radius: 50%;
+    margin: 0 auto 15px;
+  }
+  
+  /* Title */
+  .profilePage h2 {
+    margin: 10px 0 5px;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  /* Subtitle */
+  .profilePage .joined {
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 25px;
+  }
+  
+  /* Input group */
+  .profilePage .input-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Input */
+  .profilePage .input-group input {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background: #2a2a2a;
+    font-size: 15px;
+    color: #fff;
+  }
+  
+  /* Focus */
+  .profilePage .input-group input:focus {
+    border: 1px solid #9e024b;
+    background: #1f1f1f;
+  }
+  
+  /* Button */
+  .profilePage .btn {
+    margin-top: 20px;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    background: #9e024b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .profilePage .btn:hover {
+    background: #7a013a;
+  }

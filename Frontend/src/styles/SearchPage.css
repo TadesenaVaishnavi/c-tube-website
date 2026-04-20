@@ -1,0 +1,69 @@
+/* FULL PAGE */
+.searchPage {
+    background: #0b0b0b;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* TITLE */
+  .searchTitle {
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  /* GRID */
+  .searchGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  /* CARD */
+  .searchCard {
+    background: #181818;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .searchCard:hover {
+    transform: scale(1.03);
+  }
+  
+  /* THUMBNAIL */
+  .searchThumbnail {
+    height: 150px;
+    background: #333;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .searchThumbnail span {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: black;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+  }
+  
+  /* INFO */
+  .searchInfo {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .searchAvatar {
+    width: 35px;
+    height: 35px;
+    background: gray;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  /* EMPTY */
+  .noResult {
+    color: white;
+  }

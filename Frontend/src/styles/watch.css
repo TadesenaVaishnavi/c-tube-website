@@ -1,0 +1,455 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+  background: #0b0b0b;
+  color: white;
+  overflow-y: auto;
+}
+
+/* NAVBAR */
+/* .watchnavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.watchnavLeft,
+.watchsearchBar,
+.watchnavRight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+} */
+
+/* .watchsearchBar input {
+  width: 26px;
+  cursor: pointer; */
+
+  /* padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 250px;
+  background: #222;
+  color: white; */
+/* } */
+
+/* .nav-left,
+.nav-center,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-center input {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 250px;
+  background: #222;
+  color: white;
+} */
+
+/* MAIN LAYOUT */
+.watch-container {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  height: calc(100vh - 60px);
+}
+
+/* LEFT SECTION */
+.video-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* VIDEO PLAYER */
+.video-section iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* VIDEO TITLE */
+.video-title {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* CHANNEL ROW */
+.channel-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.channel-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar2 {
+  width: 40px;
+  height: 40px;
+  background: gray;
+  border-radius: 50%;
+}
+
+/* BUTTONS */
+button {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #222;
+  color: white;
+}
+
+button:hover {
+  background: #333;
+}
+
+/* COMMENTS */
+.comments {
+  margin-top: 10px;
+}
+
+.comment-box,
+.comment {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.comment-box input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  background: #222;
+  color: white;
+}
+
+/* RIGHT PANEL (IMPORTANT) */
+/* .right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+  overflow: hidden;
+} */
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+}
+
+/* CHAT PANEL (TOP) */
+.chat-panel {
+  background: #111;
+  padding: 10px;
+  border-radius: 10px;
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-body {
+  flex: 1;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.chat-input {
+  margin-top: 8px;
+}
+
+.chat-input input {
+  width: 100%;
+  padding: 6px;
+  border-radius: 20px;
+  border: none;
+  background: #222;
+  color: white;
+}
+
+/* UP NEXT (MIDDLE SCROLLABLE) */
+.upnext {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.upnext-item {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.upnext-item:hover {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.thumb {
+  width: 90px;
+  height: 55px;
+  background: gray;
+  border-radius: 6px;
+}
+
+/* VIDEO CARD TEXT */
+.video-info {
+  font-size: 13px;
+}
+
+/* QUEUE (BOTTOM BOX) */
+.queue {
+  background: #111;
+  padding: 10px;
+  border-radius: 10px;
+  flex: 0 0 180px;
+  overflow-y: auto;
+}
+
+.queue-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+/* SCROLLBAR (OPTIONAL NICE LOOK) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  body {
+    overflow: auto;
+  }
+
+  .watch-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .video-section iframe {
+    height: 250px;
+  }
+
+  .right-panel {
+    height: auto;
+  }
+}
+
+.video-card {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.video-card:hover {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+/* Thumbnail (LEFT) */
+.thumbnail2 {
+  width: 160px;
+  height: 90px;
+  background: #aaa;
+  border-radius: 8px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Duration */
+.duration {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: black;
+  padding: 2px 5px;
+  font-size: 11px;
+  border-radius: 3px;
+}
+
+/* Text (RIGHT) */
+.video-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.video-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.channel-name,
+.video-meta {
+  font-size: 12px;
+  color: #aaa;
+}
+
+
+/* NAVBAR */
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-center input {
+  width: 300px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  background: #222;
+  color: white;
+}
+
+.nav-left img,
+.nav-right img {
+  width: 24px;
+  cursor: pointer;
+} */
+
+/* NAVBAR */
+.watchnavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LEFT */
+.watchnavLeft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.watchnavLeft img {
+  width: 26px;
+  cursor: pointer;
+}
+
+.watch-logo {
+  width: 90px;
+}
+
+/* CENTER SEARCH */
+.watchsearchBar {
+  flex: 1;
+  max-width: 600px;
+
+  display: flex;
+  align-items: center;
+
+  background: #121212;
+  border: 1px solid #333;
+  border-radius: 50px;
+
+  padding: 6px 12px;
+}
+
+.watchsearchBar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+}
+
+/* SEARCH ICONS */
+.watchsearchIcons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.watchsearchIcons img {
+  width: 20px;
+  /* cursor: pointer; */
+}
+
+/* RIGHT */
+.watchnavRight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* WATCH ICONS GROUP */
+.watch-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.watch-icons img {
+  width: 22px;
+  cursor: pointer;
+}
+
+/* PROFILE */
+.watchprofile {
+  width: 34px;
+  height: 34px;
+  background: #e5e5e5;
+  border-radius: 50%;
+  cursor: pointer;
+}
