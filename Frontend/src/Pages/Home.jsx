@@ -1,6 +1,6 @@
 
 import React, { useRef } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "../styles/Home.css";
 
@@ -10,36 +10,36 @@ export default function Home() {
   const fileInputRef = useRef();
 
   // ✅ CONNECTED TO BACKEND
-  const handleVideoUpload = async (e) => {
-    const file = e.target.files[0];
+  // const handleVideoUpload = async (e) => {
+  //   const file = e.target.files[0];
 
-    if (!file) return;
+  //   if (!file) return;
 
-    const formData = new FormData();
+  //   const formData = new FormData();
 
-    // ⚠️ must match Spring Boot params
-    formData.append("file", file);
-    formData.append("thumbnail", file); // temporary (same file)
-    formData.append("title", file.name);
+  //   // ⚠️ must match Spring Boot params
+  //   formData.append("file", file);
+  //   formData.append("thumbnail", file); // temporary (same file)
+  //   formData.append("title", file.name);
 
-    try {
-      const res = await axios.post(
-        "http://localhost:8080/api/ctube/upload",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+  //   try {
+  //     const res = await axios.post(
+  //       "http://localhost:8080/api/ctube/upload",
+  //       formData,
+  //       {
+  //         headers: {
+  //           "Content-Type": "multipart/form-data",
+  //         },
+  //       }
+  //     );
 
-      console.log("Upload success:", res.data);
-      alert("Video uploaded successfully!");
-    } catch (error) {
-      console.log("Upload failed:", error);
-      alert("Upload failed");
-    }
-  };
+  //     console.log("Upload success:", res.data);
+  //     alert("Video uploaded successfully!");
+  //   } catch (error) {
+  //     console.log("Upload failed:", error);
+  //     alert("Upload failed");
+  //   }
+  // };
 
   // ✅ Static video data (for now)
   const videos = [
